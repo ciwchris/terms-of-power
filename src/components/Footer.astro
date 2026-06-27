@@ -1,0 +1,92 @@
+---
+const links = [
+  { href: "#method", label: "How it works" },
+  { href: "#why-mid", label: "Why mid-sized" },
+  { href: "#scope", label: "What this is" },
+  { href: "#get-involved", label: "Get involved" },
+];
+---
+
+<footer class="ft">
+  <div class="wrap ft__inner">
+    <div class="ft__top">
+      <a href="#top" class="brand" aria-label="Terms of Power — top">
+        <img
+          src="tp-mark.svg"
+          alt="Terms of Power logo"
+          height="32"
+          width="32"
+          aria-hidden="true"
+        />
+        <span class="brand__name">Terms of <span>Power</span></span>
+      </a>
+      <nav class="ft__nav" aria-label="Footer">
+        {links.map((l) => <a href={l.href}>{l.label}</a>)}
+      </nav>
+    </div>
+    <p class="fineprint ft__meta">
+      Terms of Power — 2026. An accountability project. Not legal advice. We do
+      not target individuals or employees.
+    </p>
+  </div>
+</footer>
+
+<style>
+  .ft {
+    border-top: 1px solid var(--border);
+    background: var(--surface-page);
+    padding: 48px var(--space-5);
+  }
+  .ft__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-5);
+    flex-wrap: wrap;
+  }
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+  .brand:hover {
+    text-decoration: none;
+  }
+  .brand__rule {
+    width: 10px;
+    height: 22px;
+    background: var(--accent);
+    border-radius: 2px;
+    display: inline-block;
+  }
+  .brand__name {
+    font-weight: var(--weight-semibold);
+    font-size: 18px;
+    color: var(--foreground);
+    letter-spacing: -0.01em;
+  }
+  .brand__name span {
+    color: var(--accent);
+  }
+
+  .ft__nav {
+    display: flex;
+    gap: var(--space-5);
+    flex-wrap: wrap;
+  }
+  .ft__nav a {
+    font-size: var(--text-small);
+    color: var(--muted-foreground);
+    text-decoration: none;
+  }
+  .ft__nav a:hover {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .ft__meta {
+    margin: 28px 0 0;
+    max-width: 70ch;
+  }
+</style>
