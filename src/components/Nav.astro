@@ -1,18 +1,18 @@
 ---
 // SiteHeader — sticky, translucent off-white with backdrop blur.
-// Single-page site: nav items scroll to in-page sections.
+// Anchors are root-relative (/#…) so they work from campaign pages too, not
+// just the homepage where the target sections live.
 const links = [
-  { href: "#method", label: "How it works" },
-  { href: "#why-mid", label: "Why mid-sized" },
-  { href: "#scope", label: "What this is" },
+  { href: "/#method", label: "How it works" },
+  { href: "/#scope", label: "What this is" },
 ];
 ---
 
 <header class="hdr">
   <div class="wrap hdr__inner">
-    <a href="#top" class="brand" aria-label="Terms of Power — top">
+    <a href="/#top" class="brand" aria-label="Terms of Power — home">
       <img
-        src="tp-mark.svg"
+        src="/tp-mark.svg"
         alt="Terms of Power logo"
         height="32"
         width="32"
@@ -39,7 +39,7 @@ const links = [
           </a>
         ))
       }
-      <a href="#get-involved" class="btn btn--primary btn--md hdr__cta"
+      <a href="/#get-involved" class="btn btn--primary btn--md hdr__cta"
         >Get involved</a
       >
     </nav>

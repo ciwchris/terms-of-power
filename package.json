@@ -8,9 +8,16 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "db:migrate:local": "wrangler d1 migrations apply terms-of-power-notify --local",
+    "db:migrate": "wrangler d1 migrations apply terms-of-power-notify --remote",
+    "db:list": "wrangler d1 execute terms-of-power-notify --remote --command \"SELECT email, created_at FROM subscribers ORDER BY created_at DESC\""
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^12.6.13",
     "astro": "^5.6.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.105.0"
   }
 }

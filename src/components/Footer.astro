@@ -1,18 +1,18 @@
 ---
+// Root-relative anchors so they work from campaign pages too, not just home.
 const links = [
-  { href: "#method", label: "How it works" },
-  { href: "#why-mid", label: "Why mid-sized" },
-  { href: "#scope", label: "What this is" },
-  { href: "#get-involved", label: "Get involved" },
+  { href: "/#method", label: "How it works" },
+  { href: "/#scope", label: "What this is" },
+  { href: "/#get-involved", label: "Get involved" },
 ];
 ---
 
 <footer class="ft">
   <div class="wrap ft__inner">
     <div class="ft__top">
-      <a href="#top" class="brand" aria-label="Terms of Power — top">
+      <a href="/#top" class="brand" aria-label="Terms of Power — home">
         <img
-          src="tp-mark.svg"
+          src="/tp-mark.svg"
           alt="Terms of Power logo"
           height="32"
           width="32"

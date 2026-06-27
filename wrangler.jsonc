@@ -1,0 +1,20 @@
+{
+  // Cloudflare Pages + bindings config. Used by `astro dev` (via platformProxy),
+  // `wrangler d1` migrations, and `wrangler pages deploy`.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "terms-of-power",
+  "compatibility_date": "2025-06-01",
+  "pages_build_output_dir": "./dist",
+
+  // D1 database that backs the "notify me" list.
+  // `database_id` is a placeholder — replace it with the id printed by
+  // `npx wrangler d1 create terms-of-power-notify` (see README "Notify list").
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "terms-of-power-notify",
+      "database_id": "REPLACE_WITH_D1_DATABASE_ID",
+      "migrations_dir": "migrations"
+    }
+  ]
+}
